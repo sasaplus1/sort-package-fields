@@ -3,6 +3,9 @@
   "description": "sort package.json's fields",
   "version": "0.1.0",
   "author": "sasa+1 <sasaplus1@gmail.com>",
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
