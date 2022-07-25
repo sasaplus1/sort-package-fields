@@ -1,0 +1,11 @@
+{
+  "name": "sort-package-fields",
+  "description": "sort package.json's fields",
+  "version": "0.1.0",
+  "author": "sasa+1 <sasaplus1@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sasaplus1/sort-package-fields.git"
+  }
+}
