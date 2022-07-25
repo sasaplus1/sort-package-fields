@@ -1,0 +1,12 @@
+{
+  "extends": "@tsconfig/strictest/tsconfig.json",
+  "compilerOptions": {
+    "declaration": true,
+    "module": "CommonJS",
+    "sourceMap": true,
+    "target": "ES2015"
+  },
+  "files": [
+    "./index.ts"
+  ]
+}
