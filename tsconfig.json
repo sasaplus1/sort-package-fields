@@ -7,6 +7,7 @@
     "target": "ES2015"
   },
   "files": [
+    "./basic-orders.ts",
     "./index.ts"
   ]
 }
