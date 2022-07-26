@@ -1,3 +1,4 @@
 *.js
 *.d.ts
 !.*.js
+!npm_scripts/*.js
