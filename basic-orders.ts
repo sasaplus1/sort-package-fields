@@ -1,3 +1,8 @@
+/*!
+ * This script was generated from package.json.
+ * package.json is located in https://json.schemastore.org/package.json.
+ * It's released under the Apache license 2.0.
+ */
 export const basicOrders = {
   name: {
     order: 0

@@ -31,9 +31,15 @@ const fieldOrders = Object.entries(schema.properties).reduce(pickFields, {});
 
 const output = path.join(path.dirname(file), 'basic-orders.ts');
 
-const code = `export const basicOrders = ${util.inspect(fieldOrders, {
-  compact: false,
-  depth: null
-})} as const;` + '\n';
+const code =
+  `/*!
+ * This script was generated from package.json.
+ * package.json is located in https://json.schemastore.org/package.json.
+ * It's released under the Apache License 2.0.
+ */
+export const basicOrders = ${util.inspect(fieldOrders, {
+    compact: false,
+    depth: null
+  })} as const;` + '\n';
 
 fs.writeFileSync(output, code, 'utf8');
