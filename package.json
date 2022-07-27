@@ -29,5 +29,11 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/sasaplus1/sort-package-fields.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "download": "node ./npm_scripts/download.js",
+    "generate": "node ./npm_scripts/generate.js ./schema.json",
+    "pregenerate": "yarn run download"
   }
 }
