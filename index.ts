@@ -31,7 +31,11 @@ export function sortPackageFields(
     }
   }
 
-  basics.sort(function ascendingSort(a: string, b: string): -1 | 0 | 1 {
+  function ascendingSort<T extends string | number>(a: T, b: T): -1 | 0 | 1 {
+    return a < b ? -1 : a > b ? 1 : 0;
+  }
+
+  basics.sort(function (a, b) {
     const aIndex = orders[a]?.order;
     const bIndex = orders[b]?.order;
 
@@ -39,27 +43,9 @@ export function sortPackageFields(
       return 0;
     }
 
-    if (aIndex < bIndex) {
-      return -1;
-    }
-
-    if (aIndex > bIndex) {
-      return 1;
-    }
-
-    return 0;
+    return ascendingSort(aIndex, bIndex);
   });
-  others.sort(function ascendingSort(a: string, b: string): -1 | 0 | 1 {
-    if (a < b) {
-      return -1;
-    }
-
-    if (a > b) {
-      return 1;
-    }
-
-    return 0;
-  });
+  others.sort(ascendingSort);
 
   return [...basics, ...others].reduce(function (prev, curr) {
     const result: Record<string, unknown> = {
